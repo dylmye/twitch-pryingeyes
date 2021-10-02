@@ -1,10 +1,14 @@
 {
-	"name": "Prying Eyes for Twitch - Hide Your Twitch Email And Phone Number",
+	"name": "Prying Eyes for Twitch - Hide Your Details",
 	"version": "1.0.0",
 	"description": "Hide your email and phone number in your Twitch settings",
 	"homepage_url": "https://github.com/dylmye/twitch-pryingeyes",
 	"manifest_version": 3,
 	"minimum_chrome_version": "93",
+	"icons": {
+		"128": "icon-128.png",
+		"256": "icon.png"
+	},
 	"permissions": [
 		"webNavigation",
 		"scripting"
