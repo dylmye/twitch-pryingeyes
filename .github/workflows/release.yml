@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 20
       - name: install
         run: yarn install --frozen-lockfile
-      - run: npm test
+      - run: yarn test
       - uses: fregante/daily-version-action@v1
         name: Create tag if necessary
         id: daily-version

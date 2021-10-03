@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm test
+      - name: install
+        run: yarn install --frozen-lockfile
+      - name: test
+        run: yarn test
