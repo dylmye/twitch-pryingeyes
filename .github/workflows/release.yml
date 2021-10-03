@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 20
       - name: install
-        run: npm ci || npm install
+        run: yarn install --frozen-lockfile
       - run: npm test
       - uses: fregante/daily-version-action@v1
         name: Create tag if necessary
