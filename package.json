@@ -17,20 +17,30 @@
 		"envs": [
 			"browser"
 		],
+		"global": [
+			"chrome"
+		],
 		"rules": {
 			"no-unused-vars": [
 				"error",
 				{
 					"varsIgnorePattern": "browser"
 				}
-			]
+			],
+			"object-curly-spacing": 0,
+			"quotes": 0,
+			"unicorn/prefer-query-selector": 0,
+			"prefer-arrow-callback": 0
 		}
 	},
 	"stylelint": {
-		"extends": "stylelint-config-xo"
+		"extends": "stylelint-config-xo",
+		"rules": {
+			"no-empty-source": null
+		}
 	},
 	"dependencies": {
-		"webext-options-sync": "^2.0.1",
+		"webext-options-sync": "^3.0.0",
 		"webextension-polyfill": "^0.8.0"
 	},
 	"devDependencies": {
@@ -40,7 +50,7 @@
 		"parcel": "^2.0.0-rc.0",
 		"stylelint": "^13.13.1",
 		"stylelint-config-xo": "^0.20.0",
-		"xo": "^0.44.0"
+		"xo": "^0.45.0"
 	},
 	"webExt": {
 		"sourceDir": "distribution"

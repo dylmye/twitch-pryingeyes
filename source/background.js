@@ -11,20 +11,20 @@ function init() {
 	chrome.webNavigation.onCompleted.addListener(function ({ tabId }) {
 		chrome.scripting.executeScript({
 			target: { tabId },
-			files: ['hideDetails.js']
+			files: ['hide-details.js'],
 		});
 	}, filter);
 
 	chrome.webNavigation.onHistoryStateUpdated.addListener(function ({ tabId }) {
 		chrome.scripting.executeScript({
 			target: { tabId },
-			files: ['hideDetails.js']
+			files: ['hide-details.js'],
 		});
 	}, filter);
 }
 
 try {
 	init();
-} catch (e) {
-	console.error("PryingEyes error", e);
+} catch (error) {
+	console.error("PryingEyes error", error);
 }

@@ -1,15 +1,13 @@
-function manipulateDom(list) {
-	const email = document.querySelector(
-		'p[data-a-target="security-email-text"]'
-	);
-	const phone = document.querySelector(
-		'p[data-a-target="security-phone-text"]'
-	);
+function manipulateDom() {
+	const email = document.querySelector('p[data-a-target="security-email-text"]');
+	const phone = document.querySelector('p[data-a-target="security-phone-text"]');
+
 	if (email !== null) {
-		email.innerHTML = "******";
+		email.textContent = "******";
 	}
+
 	if (phone !== null) {
-		phone.innerHTML = "******";
+		phone.textContent = "******";
 	}
 }
 
@@ -18,6 +16,7 @@ function trackAndApply() {
 	if (root === null) {
 		return;
 	}
+
 	const observer = new MutationObserver(manipulateDom);
 	const config = {
 		attributes: true,
